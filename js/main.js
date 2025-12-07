@@ -8,18 +8,18 @@ import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDPCiurJB2gT_EYcsQCHdQk_jD6GyRKOPs",
+  apiKey: "※＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊＊",
   authDomain: "type-sjr.firebaseapp.com",
-  databaseURL: "https://type-sjr-default-rtdb.firebaseio.com",
+  databaseURL: "**********************",
   projectId: "type-sjr",
   storageBucket: "type-sjr.firebasestorage.app",
-  messagingSenderId: "857505984126",
-  appId: "1:857505984126:web:03e7a3c59caf90f9aab22f"
+  messagingSenderId: "******************",
+  appId: "****************************"
 };
 
 // ★★★★★★★★★★★デバッグ用：常時チャット画面を表示、後で削除★★★★★★★★★★★★★★
-$("#register-screen").addClass("hidden");
-$("#chat-screen").removeClass("hidden");
+// $("#register-screen").addClass("hidden");
+// $("#chat-screen").removeClass("hidden");
 
 // 進次郎フレーズ集
 const shinjiroLines = [
@@ -124,7 +124,7 @@ $("#send-btn").on("click", function () {
 
 // 進次郎がランダムに割り込む
 function maybePostShinjiro() {
-  // 例えば 90% の確率で割り込む
+  // 90% の確率で割り込む
   const r = Math.random();
   if (r < 0.1) {
     return; // 何もせず帰る
