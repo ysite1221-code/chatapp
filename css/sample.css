@@ -1,0 +1,227 @@
+  body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #e5e5e5;
+  }
+
+  /* 共通 */
+  .hidden {
+      display: none;
+  }
+
+  .btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: none;
+      background: #06c755;
+      /* LINEっぽい */
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+  }
+
+  .btn:disabled {
+      opacity: 0.5;
+      cursor: default;
+  }
+
+  /* 登録画面 */
+  #register-screen {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #111;
+      color: #fff;
+  }
+
+  .register-card {
+      background: #1c1c1c;
+      padding: 24px 28px;
+      border-radius: 16px;
+      width: 320px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  }
+
+  .register-card h1 {
+      font-size: 20px;
+      margin-bottom: 16px;
+  }
+
+  .register-card label {
+      font-size: 13px;
+      opacity: 0.8;
+  }
+
+  .register-card input {
+      width: 100%;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      border: 1px solid #444;
+      background: #111;
+      color: #fff;
+      box-sizing: border-box;
+  }
+
+  /* チャット画面 */
+  #chat-screen {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .chat-header {
+      height: 56px;
+      background: #06c755;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+  }
+
+  .user-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #fff;
+      color: #06c755;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-right: 8px;
+  }
+
+  .chat-title {
+      font-size: 16px;
+      font-weight: 600;
+  }
+
+  .chat-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 12px;
+      background: #e5e5e5;
+  }
+
+  
+  .message-row.me {
+      justify-content: flex-end;
+  }
+
+  .message-row.other,
+  .message-row.shinjiro {
+      justify-content: flex-start;
+  }
+
+ 
+  .me .bubble {
+      background: #06c755;
+      color: #060505;
+      border-bottom-right-radius: 2px;
+  }
+
+  .other .bubble {
+      background: #fff;
+      color: #222;
+      border-bottom-left-radius: 2px;
+  }
+
+  .shinjiro .bubble {
+      background: #222;
+      color: #f5f5f5;
+      border-bottom-left-radius: 2px;
+      font-style: italic;
+  }
+
+  .avatar-small {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #ccc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      margin-right: 4px;
+  }
+
+  .shinjiro .avatar-small {
+      background: #111;
+      color: #fff;
+  }
+
+  #register-screen.hidden,
+  #chat-screen.hidden {
+      display: none;
+  }
+
+  /* 入力エリア */
+  .chat-input-area {
+      padding: 8px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+  }
+
+  .chat-input-area textarea {
+      flex: 1;
+      resize: none;
+      height: 38px;
+      padding: 8px;
+      border-radius: 20px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      font-size: 14px;
+  }
+
+  /* ▼ チャットメッセージ行の基本レイアウト */
+.message-row {
+  display: flex;
+  margin: 4px 8px;
+}
+
+/* 自分のメッセージ（右寄せ） */
+.message-row.me {
+  justify-content: flex-end;
+}
+
+/* 相手のメッセージ（左寄せ） */
+.message-row.other {
+  justify-content: flex-start;
+}
+
+/* 吹き出し本体 */
+.message-row .bubble {
+  max-width: 70%;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* 自分：ちょっとLINEっぽい緑 */
+.message-row.me .bubble {
+  background: #dcf8c6;
+}
+
+/* 相手：白ベース */
+.message-row.other .bubble {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+}
+
+/* 名前＋時刻（薄めの小さい文字） */
+.message-row .bubble .meta {
+  font-size: 10px;
+  opacity: 0.6;
+  margin-bottom: 2px;
+}
+
+/* 本文 */
+.message-row .bubble .text {
+  white-space: pre-wrap; /* 改行保持 */
+}

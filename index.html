@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+      <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="css/sample.css">
+        <title>type-sjr</title>
+</head>
+
+<body>
+ <!-- 登録画面 -->
+  <div id="register-screen">
+    <div class="register-card">
+      <h1>ユーザー登録</h1>
+      <p style="font-size:13px; opacity:.8; margin-bottom:12px;">
+        このブラウザ専用のユーザー名を登録します。
+      </p>
+      <label for="username-input">ユーザー名</label>
+      <input id="username-input" type="text" placeholder="例）Yuji">
+      <button id="register-btn" class="btn">登録してチャットへ</button>
+    </div>
+  </div>
+
+  <!-- チャット画面 -->
+  <div id="chat-screen" class="hidden">
+    <div class="chat-header">
+      <div id="header-icon" class="user-icon">U</div>
+      <div class="chat-title">力をパワーにチャット</div>
+    </div>
+
+    <div id="chat-body" class="chat-body"></div>
+
+    <div class="chat-input-area">
+      <textarea id="message-input" placeholder="メッセージを入力"></textarea>
+      <button id="send-btn" class="btn">送信</button>
+    </div>
+  </div>
+
+ 
+  <!-- Firebase含むメイン処理（ES Modules） -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+
+</html>
